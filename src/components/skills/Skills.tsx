@@ -1,6 +1,4 @@
 import Skill from "./Skill";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faCss3Alt, faJs } from "@fortawesome/free-brands-svg-icons";
 import { RiTailwindCssFill } from "react-icons/ri";
 import {
   FaHtml5,
