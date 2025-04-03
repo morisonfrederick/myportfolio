@@ -1,6 +1,11 @@
+type imageType = {
+  heading: string;
+  urls: string;
+};
+
 interface ProjectProps {
   name: string;
-  image: string;
+  images: imageType[];
   description?: string;
   features: string[];
   hosting?: string;

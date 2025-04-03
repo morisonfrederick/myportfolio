@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-main-blue text-white ">
+    <footer className="bg-main-blue text-black ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
         {/* About Section */}
         <div>
@@ -48,7 +48,8 @@ function Footer() {
       </div>
 
       <div className="text-center mt-4 text-sm text-black bg-main-yellow">
-        &copy; {new Date().getFullYear()} Your Website. All rights reserved.
+        &copy; {new Date().getFullYear()} Morison Frederick. All rights
+        reserved.
       </div>
     </footer>
   );
