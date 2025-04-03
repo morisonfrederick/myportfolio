@@ -10,11 +10,15 @@ function Nav() {
     setButtonClicked((prev) => !prev);
     console.log("button clicked ");
   };
+  const closeMenu = () => {
+    setButtonClicked(false);
+    console.log("close button clicked");
+  };
   return (
     <>
       {/* desktop navbar view */}
       <div className="sm:flex hidden">
-        <Navlinks />
+        <Navlinks closeButton={closeMenu} />
       </div>
 
       {/* mobile navbar view */}
@@ -28,7 +32,7 @@ function Nav() {
       >
         <div className="flex  flex-col items-center gap-10 pt-5">
           <IoMdCloseCircle size={45} onClick={togleMenu} />
-          <Navlinks />
+          <Navlinks closeButton={closeMenu} />
         </div>
       </div>
     </>

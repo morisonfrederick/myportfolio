@@ -1,27 +1,42 @@
 import Mybutton from "../components/Mybutton";
+import { FC } from "react";
 
-function Navlinks() {
-  return (
-    <>
-      <a href="#">
-        <Mybutton>Home</Mybutton>
-      </a>
-      <a href="#about">
-        <Mybutton>About me</Mybutton>
-      </a>
-      <a href="#skills">
-        <Mybutton>Skills</Mybutton>
-      </a>
-      <a href="#projects">
-        <Mybutton>Projects</Mybutton>
-      </a>
-      <a href="#contacts">
-        <Mybutton bg_color="bg-main-yellow" text_color="text-white">
-          Contact me
-        </Mybutton>
-      </a>
-    </>
-  );
+const links = [
+  { href: "/", label: "Home" },
+  { href: "#about", label: "About me" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  {
+    href: "#contacts",
+    label: "Contact me",
+    bg_color: "bg-main-yellow",
+    text_color: "text-white",
+  },
+];
+interface closeButtonType {
+  closeButton: () => void;
 }
+
+const Navlinks: FC<closeButtonType> = ({ closeButton }) => {
+  console.log("nav menu open");
+
+  console.log("function passed : ", closeButton);
+
+  return (
+    <nav role="navigation" className="flex flex-col gap-3">
+      {links.map(({ href, label, bg_color, text_color }) => (
+        <a key={href} href={href} onClick={closeButton} aria-label={label}>
+          <Mybutton
+            bg_color={bg_color}
+            text_color={text_color}
+            cb={closeButton}
+          >
+            {label}
+          </Mybutton>
+        </a>
+      ))}
+    </nav>
+  );
+};
 
 export default Navlinks;

@@ -17,7 +17,7 @@ function SocialLinks() {
             size="xl"
           />
         </a>
-        <a href="https://api.whatsapp.com/send?phone=353894268830">
+        <a href="https://api.whatsapp.com/send?phone=353834398388">
           <FontAwesomeIcon
             className="text-green-700"
             icon={faWhatsapp}
