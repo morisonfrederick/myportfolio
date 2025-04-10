@@ -30,7 +30,7 @@ function Nav() {
           buttonClicked ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex  flex-col items-center gap-10 pt-5">
+        <div className="flex  sm:flex-col items-center gap-10 pt-5">
           <IoMdCloseCircle size={45} onClick={togleMenu} />
           <Navlinks closeButton={closeMenu} />
         </div>
