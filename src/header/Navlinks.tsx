@@ -23,7 +23,7 @@ const Navlinks: FC<closeButtonType> = ({ closeButton }) => {
   console.log("function passed : ", closeButton);
 
   return (
-    <nav role="navigation" className="flex flex-col gap-3">
+    <nav role="navigation" className="flex flex-col sm:flex-row gap-3">
       {links.map(({ href, label, bg_color, text_color }) => (
         <a key={href} href={href} onClick={closeButton} aria-label={label}>
           <Mybutton
