@@ -24,7 +24,7 @@ const Project: FC<ProjectProps> = ({
         <h1 className="font-bold text-center mt-2 text-white">{name}</h1>
       </div>
       <div className="flex sm:flex-row-reverse flex-col p-2 ">
-        <div className="flex sm:w-1/2  overflow-y-scroll no-scrollbar gap-5">
+        <div className="flex sm:w-1/2  overflow-y-scroll no-scrollbar gap-5 border border-amber-300 rounded-2xl shadow-2xl  ml-2">
           {images?.map((image, index) => (
             <div key={index} className="flex-none w-full">
               <div className="flex gap-8 items-center text-center justify-center">

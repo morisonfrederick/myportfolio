@@ -1,5 +1,11 @@
 import Project from "./Project";
 import bookish from "../../assets/bookish.png";
+import books from "../../assets/books.png";
+import book from "../../assets/bookdetails.png";
+import wishlist from "../../assets/wishlist.png";
+import cart from "../../assets/cart.png";
+import admin from "../../assets/admin.png";
+
 import chat from "../../assets/chat.png";
 function Projects() {
   return (
@@ -10,7 +16,11 @@ function Projects() {
           name="BOOKISH"
           images={[
             { heading: "Home", urls: bookish },
-            { heading: "Chat", urls: bookish },
+            { heading: "Books", urls: books },
+            { heading: "Book", urls: book },
+            { heading: "Wish list", urls: wishlist },
+            { heading: "Cart", urls: cart },
+            { heading: "Admin", urls: admin },
           ]}
           description=" Bookish is a fully functional eCommerce platform designed for buying and selling books online.
            It aims to provide a seamless shopping experience for users while empowering administrators with comprehensive management capabilities. 
