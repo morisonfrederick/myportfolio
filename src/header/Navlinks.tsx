@@ -18,10 +18,6 @@ interface closeButtonType {
 }
 
 const Navlinks: FC<closeButtonType> = ({ closeButton }) => {
-  console.log("nav menu open");
-
-  console.log("function passed : ", closeButton);
-
   return (
     <nav role="navigation" className="flex flex-col sm:flex-row gap-3">
       {links.map(({ href, label, bg_color, text_color }) => (

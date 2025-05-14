@@ -8,11 +8,9 @@ function Nav() {
   const [buttonClicked, setButtonClicked] = useState(false);
   const togleMenu = () => {
     setButtonClicked((prev) => !prev);
-    console.log("button clicked ");
   };
   const closeMenu = () => {
     setButtonClicked(false);
-    console.log("close button clicked");
   };
   return (
     <>
@@ -30,7 +28,7 @@ function Nav() {
           buttonClicked ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex  sm:flex-col items-center gap-10 pt-5">
+        <div className="flex  flex-col items-center gap-10 pt-5">
           <IoMdCloseCircle size={45} onClick={togleMenu} />
           <Navlinks closeButton={closeMenu} />
         </div>
