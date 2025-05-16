@@ -47,7 +47,13 @@ function Banner() {
 
         {/* section for image  */}
         <div className=" sm:w-1/2">
-          <img src={banner} alt="some image" className="w-full h-auto" />
+          <img
+            src={banner}
+            width={640}
+            height={360}
+            alt="some image"
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </>

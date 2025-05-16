@@ -33,7 +33,13 @@ const Project: FC<ProjectProps> = ({
                 <FaAnglesRight />
               </div>
 
-              <img src={image.urls} className="" alt="bookish image" />
+              <img
+                src={image.urls}
+                width={640}
+                height={360}
+                className=""
+                alt="bookish image"
+              />
             </div>
           ))}
         </div>
