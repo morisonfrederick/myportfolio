@@ -59,6 +59,7 @@ function Header() {
             />
             <select
               defaultValue={"6"}
+              value={station}
               onChange={(e) => {
                 handleSelect(e);
               }}
