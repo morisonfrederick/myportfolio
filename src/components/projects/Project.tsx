@@ -46,13 +46,18 @@ const Project: FC<ProjectProps> = ({
             <h1 className="text-main-blue">Discription</h1>
             <p> {description}</p>
             <h1 className="mt-2 text-main-blue">features</h1>
-            {features.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
+            <ul>
+              {features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+
             <h1 className="mt-2 text-main-blue">Stack</h1>
-            {stack.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
+            <ul>
+              {stack.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </div>
           <Mybutton
             bg_color="bg-main-yellow"

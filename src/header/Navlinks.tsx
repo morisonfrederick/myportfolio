@@ -10,7 +10,7 @@ const links = [
     href: "#contacts",
     label: "Contact me",
     bg_color: "bg-main-yellow",
-    text_color: "text-white",
+    text_color: "text-black",
   },
 ];
 interface closeButtonType {

@@ -12,7 +12,7 @@ const Skill: FC<skillProps> = ({ name, children }) => {
       transition={{ duration: 0.6, ease: "easeOut" }} // Smooth animation
     >
       <div>{children}</div>
-      <h1 className="text-sm text-main-blue">{name}</h1>
+      <h1 className="text-sm text-black">{name}</h1>
     </motion.div>
   );
 };

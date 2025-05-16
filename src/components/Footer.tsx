@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-main-blue text-black ">
+    <footer className="bg-main-blue text-white ">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
         {/* About Section */}
         <div>

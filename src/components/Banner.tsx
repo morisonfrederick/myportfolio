@@ -20,7 +20,7 @@ function Banner() {
             </h3>
             <h3
               className="sm:text-6xl text-4xl font-bold text-main-yellow text-center ml-[20%]
-            "
+              "
             >
               Developer
             </h3>
@@ -38,7 +38,7 @@ function Banner() {
           </p>
           <div className="flex gap-4 justify-center mt-2">
             <a href="/Morison_CV.pdf" download="Morison_cv.pdf">
-              <Mybutton bg_color="bg-main-yellow" text_color="text-white">
+              <Mybutton bg_color="bg-main-yellow" text_color="text-black">
                 Download CV
               </Mybutton>
             </a>
@@ -47,7 +47,7 @@ function Banner() {
 
         {/* section for image  */}
         <div className=" sm:w-1/2">
-          <img src={banner} alt="some image" />
+          <img src={banner} alt="some image" className="w-full h-auto" />
         </div>
       </div>
     </>

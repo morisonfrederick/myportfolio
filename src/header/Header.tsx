@@ -7,10 +7,12 @@ import { Thermometer, Loader } from "lucide-react";
 
 function Header() {
   const [imgURL, setImageURL] = useState();
+  const [loading, setLoading] = useState(true);
   const [temp, setTemp] = useState();
   const [station, setStation] = useState(6);
   useEffect(() => {
     const fetchWeather = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
           "https://cors-anywhere.herokuapp.com/https://www.met.ie/Open_Data/xml/obs_present.xml"
@@ -21,9 +23,12 @@ function Header() {
 
         const weather_img_url = jsonObj?.observations?.station[station]?.symbol;
         const temp = jsonObj?.observations?.station[station]?.temp;
-        weather_img_url && setImageURL(weather_img_url);
-        console.log(weather_img_url);
-        temp && setTemp(temp);
+        if (weather_img_url && temp) {
+          console.log(weather_img_url);
+          setImageURL(weather_img_url);
+          setTemp(temp);
+          setLoading(false);
+        }
       } catch (error) {
         console.log("hello error: ", error);
       }
@@ -37,15 +42,27 @@ function Header() {
   return (
     <>
       <div className="flex justify-between items-center lg:ml-40 lg:mr-40 mt-4 ml-2  max-w-full sm:ml-2  sm:mr-2    ">
-        <img src={logo} alt="" width={40} />
-        {imgURL ? (
-          <div className="flex gap-3">
-            <img src={`/${imgURL}`} width={40} />
+        <img src={logo} alt="logo" className="w-10 h-10" />
+        {loading ? (
+          <div className="w-[235px] flex items-center justify-center">
+            <Loader className="animate-spin " />
+          </div>
+        ) : (
+          <div className="flex gap-3  w-[235px]">
+            <img
+              src={imgURL || "/fallback.png"}
+              alt="weather image"
+              width={40}
+              onError={(e) => {
+                e.currentTarget.src = "/fallback.png";
+              }}
+            />
             <select
               defaultValue={"6"}
               onChange={(e) => {
                 handleSelect(e);
               }}
+              aria-label="county"
             >
               <option value="1">Athnery</option>
               <option value="2">Ballyhaise</option>
@@ -60,8 +77,6 @@ function Header() {
               <p>{`${temp}°C`}</p>
             </div>
           </div>
-        ) : (
-          <Loader className="flex items-center" />
         )}
         <Nav />
       </div>
