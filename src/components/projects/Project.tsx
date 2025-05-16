@@ -11,15 +11,19 @@ const Project: FC<ProjectProps> = ({
   hosting,
   description,
   stack,
+  githubURL,
 }) => {
-  const onpenSiteLink = () => {
+  const openLiveDemo = () => {
     window.open(url);
+  };
+  const openGithub = () => {
+    window.open(githubURL);
   };
   return (
     <div className="mt-5">
       <div
         className="h-10 bg-main-blue flex justify-center cursor-pointer"
-        onClick={onpenSiteLink}
+        onClick={openLiveDemo}
       >
         <h1 className="font-bold text-center mt-2 text-white">{name}</h1>
       </div>
@@ -52,26 +56,39 @@ const Project: FC<ProjectProps> = ({
             <h1 className="text-main-blue">Discription</h1>
             <p> {description}</p>
             <h1 className="mt-2 text-main-blue">features</h1>
-            <ul>
+            <ul className="list-disc pl-6">
               {features.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
             </ul>
 
             <h1 className="mt-2 text-main-blue">Stack</h1>
-            <ul>
+            <ul className="list-disc pl-6">
               {stack.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
-          <Mybutton
-            bg_color="bg-main-yellow"
-            text_color="text-black"
-            cb={onpenSiteLink}
-          >
-            Live Demo
-          </Mybutton>
+          <div className="flex sm:gap-5 gap-2">
+            <div className="w-1/2">
+              <Mybutton
+                bg_color="bg-main-yellow"
+                text_color="text-black"
+                cb={openLiveDemo}
+              >
+                Live Demo
+              </Mybutton>
+            </div>
+            <div className="w-1/2">
+              <Mybutton
+                bg_color="bg-main-yellow"
+                text_color="text-black"
+                cb={openGithub}
+              >
+                Github Link
+              </Mybutton>
+            </div>
+          </div>
         </div>
       </div>
     </div>

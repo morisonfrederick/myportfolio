@@ -11,5 +11,6 @@ interface ProjectProps {
   hosting?: string;
   url?: string;
   stack: string[];
+  githubURL: string;
 }
 export default ProjectProps;

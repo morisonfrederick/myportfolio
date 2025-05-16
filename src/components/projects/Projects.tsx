@@ -22,18 +22,23 @@ function Projects() {
             { heading: "Cart", urls: cart },
             { heading: "Admin", urls: admin },
           ]}
-          description=" Bookish is a fully functional eCommerce platform designed for buying and selling books online.
-           It aims to provide a seamless shopping experience for users while empowering administrators with comprehensive management capabilities. 
-           The platform caters to both logged-in users and guests, ensuring accessibility and flexibility for all types of customers."
+          description=" Bookish is a fully functional eCommerce platform designed for buying and selling books online. 
+          It offers a seamless shopping experience with essential features like advanced filtering, wishlist, cart, and flexible payment options. 
+          The platform supports both guest checkouts and registered users. 
+          It also empowers administrators with complete control over inventory, sales, discounts, and detailed reporting through a dedicated admin console."
           url="https://thebookish.online/home"
           features={[
-            "Payment integration using paypal",
-            "wallet integration ",
-            "purchase without login",
-            "admin-> full controll over products,sale and discount",
+            "Responsive UI built with EJS and Bootstrap",
+            "Secure user authentication with email OTP verification using Nodemailer",
+            "Purchase without login (guest checkout support)",
+            "Advanced product filtering, wishlist, and shopping cart",
+            "Payment integration using PayPal and Cash on Delivery (COD)",
+            "Integrated wallet system for managing returns and cancellations",
+            "Admin dashboard with full control over products, stock, sales, discounts, statistics, and report downloads",
           ]}
-          stack={["Node", "Express", "Mongodb"]}
+          stack={["Node", "Express", "MongoDB (with Mongoose)"]}
           hosting="AWS"
+          githubURL="https://github.com/morisonfrederick/bookish"
         />
         <Project
           name="CHAT-APP"
@@ -44,12 +49,17 @@ function Projects() {
           url="https://morison.shop/"
           features={[
             "Real time messaging powered by Socket.io",
-            "User authentication using JWT ",
             "Persistant message storage",
-            "Responsive design",
+            "Secure user authentication with JWT (access & refresh tokens)",
+            "Global state management with Redux",
+            "Image uploads with Multer and server-side storage",
+            "Admin panel to manage users and projects",
+            "Axios interceptors for token handling",
+            "Responsive UI with React and Tailwind CSS",
           ]}
           stack={["Node", "Express", "Mongodb", "React", "Tailwind CSS"]}
           hosting="RENDER.COM"
+          githubURL="https://github.com/morisonfrederick/chat_app"
         />
       </div>
     </div>
