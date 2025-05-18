@@ -15,7 +15,7 @@ function Header() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://www.met.ie/Open_Data/xml/obs_present.xml"
+          "https://portfolio-backend-26wk.onrender.com/www.met.ie/Open_Data/xml/obs_present.xml"
         );
         const parser = new XMLParser();
 
