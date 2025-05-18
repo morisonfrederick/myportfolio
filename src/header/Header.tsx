@@ -15,7 +15,7 @@ function Header() {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://cors-anywhere.herokuapp.com/https://www.met.ie/Open_Data/xml/obs_present.xml"
+          "https://www.met.ie/Open_Data/xml/obs_present.xml"
         );
         const parser = new XMLParser();
 
