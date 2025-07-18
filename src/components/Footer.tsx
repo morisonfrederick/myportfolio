@@ -7,7 +7,7 @@ function Footer() {
           <h2 className="text-lg font-semibold mb-2">WORK AUTHORIZATION</h2>
           <p className="text-sm">
             Eligible to work in Ireland (No sponsorship required) <br />
-            <span className="font-semibold">Stamp 1G Spouse visa</span>
+            <span className="font-semibold">Stamp 1G Visa</span>
           </p>
         </div>
 
